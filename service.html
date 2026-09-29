@@ -1,0 +1,665 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Services</title>
+     <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"href="style.css">
+    <style>
+
+.services-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.services h1{
+    color:#0d1730;
+    font-size:56px;
+    line-height:1.08;
+    letter-spacing:-2.7px;
+    font-weight:800;
+    text-align:center;
+    margin-bottom:55px;
+}
+
+/* GRID */
+.box-items{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+    margin-bottom:24px;
+}
+
+/* CARD */
+.box-item{
+    min-height:340px;
+    padding:30px;
+    border:1px solid #dce5f1;
+    border-radius:24px;
+
+    background:
+        radial-gradient(circle at 90% 10%, rgba(123,63,242,.22), transparent 30%),
+        linear-gradient(145deg,#071733,#102f61);
+
+    color:#fff;
+    box-shadow:0 18px 45px rgba(11,35,72,.10);
+
+    position:relative;
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.box-item::before{
+    content:"";
+    position:absolute;
+    width:170px;
+    height:170px;
+    right:-90px;
+    bottom:-90px;
+    border-radius:50%;
+    background:rgba(108,77,255,.15);
+    transition:.45s ease;
+}
+
+.box-item:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 55px rgba(11,35,72,.20);
+    border-color:#557bef;
+}
+
+.box-item:hover::before{
+    transform:scale(1.35);
+}
+
+.box-item h2{
+    position:relative;
+    z-index:2;
+    font-size:21px;
+    margin-bottom:12px;
+    color:#fff;
+}
+
+.box-item > p{
+    position:relative;
+    z-index:2;
+    color:#c8d4e7;
+    font-size:14px;
+    line-height:1.7;
+    margin-bottom:22px;
+}
+
+/* FEATURES */
+.features{
+    position:relative;
+    z-index:2;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.features li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    color:#e4ebf7;
+    font-size:13px;
+    line-height:1.5;
+    margin-bottom:13px;
+}
+
+.check{
+    width:19px;
+    height:19px;
+    min-width:19px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2868ef,#783cf0);
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+}
+
+/* HIDDEN CARDS */
+.more-cards{
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    margin:0;
+    transform:translateY(-20px);
+
+    transition:
+        max-height .8s ease,
+        opacity .5s ease,
+        transform .6s ease,
+        margin .6s ease;
+}
+
+.more-cards.show{
+    max-height:1800px;
+    opacity:1;
+    transform:translateY(0);
+    margin-bottom:24px;
+}
+
+/* BUTTON */
+.see-more-wrap{
+    display:flex;
+    justify-content:center;
+    margin-top:35px;
+}
+
+.see-more-btn{
+    min-width:165px;
+    padding:14px 22px;
+
+    border:none;
+    border-radius:50px;
+
+    color:#fff;
+    background:linear-gradient(100deg,#2868ef,#773cf0);
+
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+
+    box-shadow:0 12px 28px rgba(70,76,225,.25);
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.see-more-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 17px 35px rgba(70,76,225,.32);
+}
+
+.arrow{
+    font-size:18px;
+    transition:transform .35s ease;
+}
+
+.see-more-btn.active .arrow{
+    transform:rotate(180deg);
+}
+
+
+/* RESPONSIVE */
+@media(max-width:950px){
+
+    .services{
+        padding:65px 4%;
+    }
+
+    .services h1{
+        font-size:46px;
+    }
+
+    .box-items{
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+    }
+
+    .box-item{
+        min-height:320px;
+        padding:25px;
+    }
+}
+
+
+@media(max-width:650px){
+
+    .services{
+        padding:55px 18px;
+    }
+
+    .services h1{
+        font-size:37px;
+        letter-spacing:-1.5px;
+        margin-bottom:35px;
+    }
+
+    .box-items{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .box-item{
+        min-height:auto;
+        padding:25px;
+    }
+
+    .box-item h2{
+        font-size:19px;
+    }
+
+    .box-item > p{
+        font-size:13px;
+    }
+
+    .features li{
+        font-size:12px;
+    }
+
+    .see-more-btn{
+        width:100%;
+        max-width:280px;
+    }
+}
+</style>
+
+ </head>
+ <body>
+   <header class="header">
+
+    <div class="header-container">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="Digital Marketing Logo">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="navigation">
+
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="result.html">Results</a>
+            <a href="contact-us.html">Contact</a>
+            <a href="">Blog</a>
+          
+
+        </nav>
+
+        <!-- CTA -->
+        <a href="#" class="header-btn">
+            Let's Talk
+        </a>
+
+        <!-- Mobile Menu -->
+        <button class="menu-btn" aria-label="Open Menu">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <button class="mobile-close" type="button" aria-label="Close Menu">×</button>
+    <a href="new.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="service.html">Services</a>
+    <a href="contact-us.html">Contact</a>
+    <a href="#contact" class="mobile-cta">Let's Talk →</a>
+  </div>
+</div>
+
+   
+    <section class="hero" style="background-image: url(''); background-color: rgba(7,33,77,.82); ;">
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <!-- Badge -->
+            
+
+            <!-- Heading -->
+            <h1>
+                 Digital services built<br>
+                
+                around your goals
+            </h1>
+
+            <!-- Description -->
+            <p>
+                From search visibility to paid campaigns, social media, 
+                websites and creative production, we create connected solutions for modern brands.
+            </p>
+
+            <!-- Buttons -->
+            <!-- <div class="hero-buttons">
+
+                <a href="#" class="btn btn-primary">
+                    Get Started
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#" class="btn btn-secondary">
+                    Explore Services
+                </a>
+
+            </div> -->
+
+            <!-- Statistics -->
+            
+            </div>
+
+        </div>
+
+    </div>
+    </section>
+
+<section class="services">
+    <div class="services-container">
+
+        <h1>Dominate Google<br>Search & Beyond</h1>
+
+        <!-- FIRST 6 CARDS -->
+        <div class="box-items">
+
+            <article class="box-item">
+                <h2>SEO (Search Engine Optimization)</h2>
+                <p>Improve your website’s visibility and rankings to attract more organic traffic from search engines.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>Keyword Optimization</li>
+                    <li><span class="check">✓</span>Search Ranking Growth</li>
+                    <li><span class="check">✓</span>Organic Traffic</li>
+                    <li><span class="check">✓</span>SEO Analytics</li>
+                </ul>
+            </article>
+
+            <article class="box-item">
+                <h2>Local SEO / GMB Optimization</h2>
+                <p>Help local customers discover your business through Google Search and Google Maps.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>Google Business Profile</li>
+                    <li><span class="check">✓</span>Local Keywords</li>
+                    <li><span class="check">✓</span>Reviews Management</li>
+                    <li><span class="check">✓</span>Maps Visibility</li>
+                    <li><span class="check">✓</span>Link Building</li>
+                </ul>
+            </article>
+
+            <article class="box-item">
+                <h2>Google Ads (PPC)</h2>
+                <p>Reach high-intent customers with targeted Google advertising campaigns designed for measurable results.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>Search Ads</li>
+                    <li><span class="check">✓</span>Display Ads</li>
+                    <li><span class="check">✓</span>Keyword Targeting</li>
+                    <li><span class="check">✓</span>Conversion Tracking</li>
+                </ul>
+            </article>
+
+            <article class="box-item">
+                <h2>Meta Ads (Facebook & Instagram Ads)</h2>
+                <p>Connect with your ideal audience through highly targeted Facebook and Instagram advertising campaigns.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>Audience Targeting</li>
+                    <li><span class="check">✓</span>Creative Ads</li>
+                    <li><span class="check">✓</span>Retargeting</li>
+                    <li><span class="check">✓</span>Lead Campaigns</li>
+                </ul>
+            </article>
+
+            <article class="box-item">
+                <h2>Performance Marketing</h2>
+                <p>Drive measurable business growth through data-driven campaigns focused on leads, sales, and conversions.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>Campaign Optimization</li>
+                    <li><span class="check">✓</span>Conversion Tracking</li>
+                    <li><span class="check">✓</span>ROI Analysis</li>
+                    <li><span class="check">✓</span>Retargeting</li>
+                </ul>
+            </article>
+
+            <article class="box-item">
+                <h2>Social Media Management</h2>
+                <p>Manage your social presence with consistent, engaging, and brand-focused content.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>Content Planning</li>
+                    <li><span class="check">✓</span>Post Scheduling</li>
+                    <li><span class="check">✓</span>Community Management</li>
+                    <li><span class="check">✓</span>Performance Reports</li>
+                </ul>
+            </article>
+
+        </div>
+
+
+        <!-- HIDDEN 6 MORE CARDS -->
+        <div class="box-items more-cards" id="moreCards">
+
+            <article class="box-item">
+                <h2>Content Marketing</h2>
+                <p>Showcase products directly in Google search and connect high-intent shoppers with your store.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>Product feed optimization</li>
+                    <li><span class="check">✓</span>Shopping campaign structure</li>
+                    <li><span class="check">✓</span>ROAS-focused optimization</li>
+                </ul>
+            </article>
+
+            <article class="box-item">
+                <h2>Influencer Marketing</h2>
+                <p>Partner with relevant influencers to introduce your brand to engaged and targeted audiences.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>Influencer Research</li>
+                    <li><span class="check">✓</span>Campaign Planning</li>
+                    <li><span class="check">✓</span>Creator Partnerships</li>
+                    <li><span class="check">✓</span>Campaign Tracking</li>
+                </ul>
+            </article>
+
+            <article class="box-item">
+                <h2>Website Development</h2>
+                <p>Develop fast, responsive, secure, and user-friendly websites built for modern businesses.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>Responsive Development</li>
+                    <li><span class="check">✓</span>Clean Code</li>
+                    <li><span class="check">✓</span>Fast Performance</li>
+                    <li><span class="check">✓</span>SEO-Friendly Structure</li>
+                </ul>
+            </article>
+
+            <article class="box-item">
+                <h2>Website Design & Optimization</h2>
+                <p>Design and optimize websites for better user experience, engagement, speed, and conversions.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>UI/UX Design</li>
+                    <li><span class="check">✓</span>Mobile-Friendly Design</li>
+                    <li><span class="check">✓</span>Speed Optimization</li>
+                    <li><span class="check">✓</span>Conversion Optimization</li>
+                </ul>
+            </article>
+
+            <article class="box-item">
+                <h2>Video Production / Shoots</h2>
+                <p>Transform raw footage into engaging, professional videos designed to capture attention.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>Professional Editing</li>
+                    <li><span class="check">✓</span>Motion Graphics</li>
+                    <li><span class="check">✓</span>Transitions & Effects</li>
+                    <li><span class="check">✓</span>Audio Enhancement</li>
+                </ul>
+            </article>
+
+            <article class="box-item">
+                <h2>Reels & Short-Form Content</h2>
+                <p>Create engaging short-form videos designed to increase reach, engagement, and social media growth.</p>
+                <ul class="features">
+                    <li><span class="check">✓</span>Instagram Reels</li>
+                    <li><span class="check">✓</span>YouTube Shorts</li>
+                    <li><span class="check">✓</span>Trend-Based Content</li>
+                    <li><span class="check">✓</span>Viral-Style Creatives</li>
+                </ul>
+            </article>
+
+        </div>
+
+
+        <!-- SEE MORE BUTTON -->
+        <div class="see-more-wrap">
+            <button class="see-more-btn" id="seeMoreBtn">
+                <span id="buttonText">See More</span>
+                <span class="arrow" id="buttonArrow">↓</span>
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-image">
+        <img src="images/video.jpeg" alt="Digital marketing team working together">
+    </div>
+        <div class="about-content">
+            <span class="badge">SAhVERRA Digital Marketing</span>
+            <h1>Digital Marketing</h1>
+            <p>In this modern and digital world, traditional billboards and newspaper ads are becoming obsolete. The new approach is related to spreading information about a company and its products on websites that use the Internet. Simply put, digital marketing refers to any marketing activity that falls under online marketing. And online marketing involves connecting an organization with a particular audience through an online environment. The Internet, in turn, is part of people’s everyday lives and allows them to spend a considerable amount of time there.
+              SEO (Search Engine Optimization) – optimizing the site so that it appears in the search results when a user searches for keywords related to the company on search engines. 
+            </p>
+    
+        </div>
+    
+    </div>
+    
+</section>
+        
+
+
+  
+
+<!-- ================= MAIN FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-box">
+
+        <!-- About -->
+        <div class="footer-about">
+            <h2>Digital <span>Marketing</span></h2>
+
+            <p>
+                We build digital experiences, campaigns and
+                growth strategies that help ambitious brands
+                grow online.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="social-icons">
+
+                <a href="https://instagram.com/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://facebook.com/" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="https://linkedin.com/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="#" target="_blank">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>QUICK LINKS</h3>
+
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Results</a>
+        </div>
+
+
+        <!-- Services -->
+        <div class="footer-links">
+            <h3>SERVICES</h3>
+
+            <a href="#">SEO</a>
+            <a href="#">Google Ads</a>
+            <a href="#">Social Media</a>
+            <a href="#">Web Design</a>
+        </div>
+
+
+        <!-- Contact -->
+        <div class="footer-contact">
+            <h3>CONTACT</h3>
+
+            <p>Noida, Delhi NCR, India</p>
+            <p>+91 99999 99999</p>
+            <p>hello@digitalmarketing.in</p>
+
+            <a href="#">Get in touch →</a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<a 
+  href="https://wa.me/919999999999?text=Hello%20I%20want%20to%20know%20more%20about%20your%20services."
+  class="whatsapp-btn"
+  target="_blank"
+  rel="noopener"
+>
+    <i class="fab fa-whatsapp"></i>
+</a>
+<!-- ================= CHAT ================= -->
+
+
+
+ </body>
+ <script>
+const seeMoreBtn = document.getElementById("seeMoreBtn");
+const moreCards = document.getElementById("moreCards");
+const buttonText = document.getElementById("buttonText");
+const buttonArrow = document.getElementById("buttonArrow");
+
+seeMoreBtn.addEventListener("click", () => {
+
+    moreCards.classList.toggle("show");
+    seeMoreBtn.classList.toggle("active");
+
+    if (moreCards.classList.contains("show")) {
+
+        buttonText.textContent = "See Less";
+        buttonArrow.textContent = "↑";
+
+    } else {
+
+        buttonText.textContent = "See More";
+        buttonArrow.textContent = "↓";
+
+        document.querySelector(".services").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+});
+</script>
+<script src="javascipt.js"></script>
+</html>
